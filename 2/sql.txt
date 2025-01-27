@@ -1,0 +1,4 @@
+Base de données
+
+
+Écrivez des commandes pour créer une base de données dans un ministère : Créez quatre tables dans cette base de données et assurez-vous qu'elles sont bien normalisées (à l'aide de clés primaires et de clés étrangères). Veillez à écrire des requêtes pour insérer des données dans ces tables et pour lire les données de ces tables.
