@@ -1,0 +1,6 @@
+Dessiner des réseaux
+
+
+Dessinez un réseau qui utilise 5 ordinateurs, un commutateur, un routeur et 3 serveurs (DNS, DHCP et un serveur qui héberge l'application de l'entreprise) connectés de l'autre côté du routeur. Les 5 ordinateurs doivent obtenir des adresses IP de manière dynamique et utiliser l'URL (entreprise_service.com) au lieu de l'adresse IP.
+
+Veuillez télécharger un diagramme clair et étiqueté de la configuration du réseau. Vous pouvez créer le diagramme numériquement en utilisant des outils comme MS Paint, Canva, Figma ou PowerPoint, ou le dessiner à la main et le scanner ou en prendre une photo.
