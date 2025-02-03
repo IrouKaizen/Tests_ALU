@@ -1,0 +1,6 @@
+Technologies web - HTML, Java script, CSS
+
+
+Considérez l'une des tables créées dans la base de données ci-dessus et créez un formulaire HTML qui ajoute des données à la table. Utilisez CSS pour styliser le formulaire et Javascript pour éviter la soumission du formulaire si les champs obligatoires sont vides.
+
+Veuillez télécharger vos fichiers HTML, CSS et JavaScript dans un seul dossier compressé. Assurez-vous que votre code est fonctionnel et inclut des commentaires expliquant votre approche. 

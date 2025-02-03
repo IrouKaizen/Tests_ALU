@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un Employé</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Ajouter un Employé</h1>
+      <form id="employeForm">
+        <label for="nom">Nom <span>*</span></label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="Entrez le nom"
+          required
+        />
+
+        <label for="prenom">Prénom <span>*</span></label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          placeholder="Entrez le prénom"
+          required
+        />
+
+        <label for="fonction">Fonction <span>*</span></label>
+        <input
+          type="text"
+          id="fonction"
+          name="fonction"
+          placeholder="Entrez la fonction"
+          required
+        />
+
+        <label for="service">Service ID <span>*</span></label>
+        <input
+          type="number"
+          id="service"
+          name="service"
+          placeholder="Entrez l'ID du service"
+          required
+        />
+
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="error-message" class="error-message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>
+
+<script>
+  document
+    .getElementById("employeForm")
+    .addEventListener("submit", function (event) {
+      const nom = document.getElementById("nom").value.trim();
+      const prenom = document.getElementById("prenom").value.trim();
+      const fonction = document.getElementById("fonction").value.trim();
+      const service = document.getElementById("service").value.trim();
+
+      const errorMessage = document.getElementById("error-message");
+      errorMessage.textContent = "";
+
+      if (!nom || !prenom || !fonction || !service) {
+        event.preventDefault();
+        errorMessage.textContent =
+          "Tous les champs marqués d'un * sont obligatoires.";
+        return;
+      }
+
+      if (isNaN(service) || Number(service) <= 0) {
+        event.preventDefault();
+        errorMessage.textContent =
+          "L'ID du service doit être un nombre positif.";
+        return;
+      }
+    });
+</script>
